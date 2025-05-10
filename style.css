@@ -1,0 +1,137 @@
+/* Shared styling for all pages */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #ffe6f0; /* soft pink background */
+  color: #4d2c3d; /* dark mauve text */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(255, 182, 193, 0.4);
+  padding: 20px 30px;
+}
+
+h1, h2, h3 {
+  color: #d46a7e; /* soft pink */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button, .btn-link {
+  display: inline-block;
+  background-color: #f9c5d1;
+  color: #4d2c3d;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 10px 15px;
+  box-shadow: 0 5px 10px rgba(255, 182, 193, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover, .btn-link:hover {
+  background-color: #f7a8b8;
+  transform: scale(1.05);
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 1.1em;
+  margin: 8px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+li::before {
+  content: "♥";
+  color: #f9c5d1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+}
+
+.photo-container {
+  width: 100%;
+  height: 200px;
+  background-color: #ffe6f0;
+  border: 2px dashed #f9c5d1;
+  border-radius: 15px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d46a7e;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #a66a7e;
+}
+
+/* Cute animation for buttons */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+button, .btn-link {
+  animation: bounce 3s infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 15px 20px;
+  }
+  button, .btn-link {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  p, li {
+    font-size: 1em;
+  }
+  .photo-container {
+    height: 150px;
+  }
+}
